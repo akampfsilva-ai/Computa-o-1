@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+
+    int i;
+    char c;
+    float f;
+
+    printf("Digite um valor inteiro: ");
+    scanf("%d", &i);
+    printf("Digite um caractere: ");
+    scanf("%c", &c);
+    printf("Digite um valor real: ");
+    scanf("%f", &f);
+    printf("Os valores sao: %c, %d e %.2f", c, i, f);
+
+    return 0;
+    }
