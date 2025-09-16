@@ -2,7 +2,7 @@
 
 int main ()
 {
-    int n, i=0, f1=0, f2=0, f3=1;
+    int n, i=0, f1=0, f2=1, f3=0;
 
     printf("Digite quantos numeros da sequencia de fibonacci voce deseja: \n");
     scanf(" %d", &n);
