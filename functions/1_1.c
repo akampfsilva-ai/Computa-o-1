@@ -13,7 +13,7 @@ int main ()
     int ano;
 
     printf("Digite o ano: \n");
-    scanf(" %d", &ano);
+    scanf(" %d \n", &ano);
 
     printf(" %d", bioun(ano));
 
