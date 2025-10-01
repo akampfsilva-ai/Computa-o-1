@@ -7,21 +7,21 @@ int main ()
     float x;
 
     printf("Digite um valor: \n");
-    scanf(" %d \n", &x);
+    scanf(" %f", &x);
 
     arredonda(x);
 
-    printf(" %d", arredonda(x));
+    printf("%d \n", arredonda(x));
 
     return 0;
 }
 
 int arredonda (float x)
 {
-    if (x % 1 >= -0.5 && x % 1 <= 0.5)
-        x=x-(x%1);
+    if (x - (int)x >= 0.5 || x - (int)x <= -0.5)
+        x = x + (1-(x-(int)x));
     else
-        x=x+(1-(x%1));
+        x = x - (x - (int)x);
 
     return x;
 }
