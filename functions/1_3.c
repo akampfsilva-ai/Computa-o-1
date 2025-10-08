@@ -7,7 +7,7 @@ int main ()
     int num, x;
 
     printf("Digite um número: \n");
-    scanf(" %d \n", &num);
+    scanf("%d \n", &num);
 
     x=calculoDigitoVerificador(num%1000);
 
