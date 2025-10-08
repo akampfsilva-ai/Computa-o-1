@@ -6,19 +6,33 @@ int main ()
 {
     int num, x;
 
-    printf("Digite um número: \n");
-    scanf("%d \n", &num);
+    printf("Digite um número: ");
+    scanf("%d", &num);
 
-    x=calculoDigitoVerificador(num%1000);
+    num=num%1000;
 
-    printf("%d \n", x);
+    printf("%d \n", num);
+
+    x=calculoDigitoVerificador(num);
+
+    printf("O digito verificador eh: %d \n", x);
 
     return 0;
 }
 
 int calculoDigitoVerificador (int num)
 {
-    num=(((num-(num%100))*1+(num%100-((num%100)%10))*2+(num%10)*3)%11)%10;
+    int a, b, c;
+
+    a=(num-(num%100))/100;
+
+    b=(num%100-((num%100)%10))/10;
+
+    c=(num%10);
+
+    num=((a*1+b*2+c*3)%11)%10;
+
+    printf("%d \n", num);
 
     return num;
 }
