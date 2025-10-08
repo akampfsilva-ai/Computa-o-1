@@ -18,10 +18,22 @@ int main ()
 
 int arredonda (float x)
 {
-    if (x - (int)x >= 0.5 || x - (int)x <= -0.5)
-        x = x + (1-(x-(int)x));
+    if (x>=0){
+        if (x - (int)x >= 0.5)
+            x = x + (1-(x-(int)x));
+        else
+            x = x - (x - (int)x);}
     else
-        x = x - (x - (int)x);
+    {
+        x=(-1)*x;
+
+        if (x - (int)x >= 0.5)
+            x = x + (1-(x-(int)x));
+        else
+            x = x - (x - (int)x);
+        
+        x=(-1)*x;
+    }
 
     return x;
 }
