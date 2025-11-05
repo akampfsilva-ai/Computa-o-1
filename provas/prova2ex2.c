@@ -36,11 +36,13 @@ int main ()
 
     arquivo = fopen(file_path, "r");
     if(arquivo == NULL)
+    {
+        printf("Nao foi possivel encontrar o arquivo %s\n", file_path);
         return 1;
-
+    }
     i=0;
 
-    while(fscanf(arquivo, "%d", &num) != EOF)
+    while((fscanf(arquivo, "%d", &num) != EOF)||i==10)
     {
         printf("Leu %d\n", num);
         
