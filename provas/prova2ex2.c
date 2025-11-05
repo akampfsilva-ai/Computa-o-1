@@ -4,15 +4,15 @@
 
 int calculaMedia (int v[], int a)
 {
-    int total;
+    int total = 0;
 
-    for(int i=0; i<=a; i++)
+    for(int i=0; i<a; i++)
     {
         printf("O espaco de v[%d] tem valor: %d\n", i, v[i]);
         total+=v[i];
     }
 
-    return (total/10);
+    return (total/a);
 }
 
 int main ()
@@ -20,7 +20,7 @@ int main ()
     FILE* arquivo;
     int i, num, v[10];
 
-    fopen(file_path, "w");
+    arquivo = fopen(file_path, "w");
     if(arquivo == NULL)
         return 1;
 
@@ -34,15 +34,15 @@ int main ()
 
     fclose(arquivo);
 
-    fopen(file_path, "r");
+    arquivo = fopen(file_path, "r");
     if(arquivo == NULL)
         return 1;
 
+    i=0;
+
     while(fscanf(arquivo, "%d", &num) != EOF)
     {
-        i=0;
-
-        printf("Leu %d", num);
+        printf("Leu %d\n", num);
         
         v[i] = num;
 
