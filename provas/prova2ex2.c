@@ -1,8 +1,8 @@
-#include <stdio.>
+#include <stdio.h>
 
 #define file_path "numeros.txt"
 
-void calculaMedia (int v[], int a)
+int calculaMedia (int v[], int a)
 {
     int total;
 
@@ -20,7 +20,7 @@ int main ()
     FILE* arquivo;
     int i, num, v[10];
 
-    fopen(file_path, "w")
+    fopen(file_path, "w");
     if(arquivo == NULL)
         return 1;
 
@@ -34,7 +34,7 @@ int main ()
 
     fclose(arquivo);
 
-    fopen(file_path, "r")
+    fopen(file_path, "r");
     if(arquivo == NULL)
         return 1;
 
